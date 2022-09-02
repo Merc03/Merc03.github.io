@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="no-siteapp">
@@ -13,7 +13,7 @@
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
     
     
-        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="shortcut icon" href="/images/favicon.png">
     
      
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -42,7 +42,7 @@
     
     <title>
         
-            Test | 只是旮角而已
+            about | 只是旮角而已
         
     </title>
     
@@ -58,7 +58,7 @@
                             <div id="sidebar" class="float-right">
     <a href="/" rel="home">
         <v-avatar size=96>
-            <img id="logo" src="/images/avatar.webp">     
+            <img id="logo" src="/images/avatar.jpg">     
         </v-avatar> 
     </a>
     <v-divider></v-divider>
@@ -79,22 +79,39 @@
     <v-list id="main-menu" class="font-weight-bold" flat>
         
             
+            <v-list-item href="/archives/" link>
+            <v-list-item-icon><v-icon>archive</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                归档
+            </v-list-item-content>
+            </v-list-item>
+        
+            
             <v-list-item href="/about/" link>
             <v-list-item-icon><v-icon>account_circle</v-icon></v-list-item-icon>
             <v-list-item-content>
-                About
+                关于
             </v-list-item-content>
             </v-list-item>
         
     </v-list>
     <v-divider></v-divider>
     
-        <div class="post-toc">
-            <a href="/2022/09/01/Test/" class="toc-header">Table of Contents</a>
-            <div class="toc-content">
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AA%E6%98%AF%E6%B5%8B%E8%AF%95"><span class="toc-number">1.</span> <span class="toc-text">只是测试</span></a></li></ol>
-            </div>
-        </div>
+        <v-list id="sub-menu" class="font-weight-medium" dense>
+            
+                
+                    <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>日记</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+        </v-list>    
     
 
     <div id="footer">
@@ -145,6 +162,11 @@
           </v-btn>
           
             
+            <v-btn icon href="/archives/">
+              <v-icon>archive</v-icon>
+            </v-btn>
+          
+            
             <v-btn icon href="/about/">
               <v-icon>account_circle</v-icon>
             </v-btn>
@@ -161,51 +183,22 @@
 </v-row>
 
                             <v-card class="elevation-2 post-card">
-    
-    
-        <div class="post-header">
-  <a class="post-header-title font-weight-medium" href="/2022/09/01/Test/">Test</a>
-  <div class="post-header-meta">   
-    <span>
-      <v-icon color="">event</v-icon>
-      Posted on:&nbsp;2022-09-01
-    </span>
-    <span>
-      <v-icon color="">event_available</v-icon>
-      Edited on:&nbsp;2022-09-01
-    </span>
-    <span>
-      <v-icon color="">folder</v-icon>
-      In:&nbsp;<a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a>
-    </span>
-    
-  </div>
-</div>
-
-    
-    
-    
-    
-    <div class="post-content typo">
-        <h1 id="只是测试"><a href="#只是测试" class="headerlink" title="只是测试"></a>只是测试</h1><p>测试文本</p>
-
+    <div class="post-header">
+        <a class="post-header-title font-weight-medium" href="/about/index.html">关于</a>
     </div>
-    <!--文末结束语-->
-    
-        <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 | The End --- </div>
-    
-    <!--页脚广告-->
-    
-    <v-divider></v-divider>
-    
-    <div class="post-nav">             
-              
+    <div class="post-content typo">
+        
+            <h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>Mercury03，HUST在校生，前OIer&#x2F;现役ACMer</p>
+<p>爱好是看番和打游戏（</p>
+<p>我的邮箱：<a href="mailto:&#x6d;&#x65;&#114;&#99;&#117;&#x72;&#x79;&#49;&#50;&#46;&#50;&#x30;&#55;&#x37;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x6d;&#x65;&#114;&#99;&#117;&#x72;&#x79;&#49;&#50;&#46;&#50;&#x30;&#55;&#x37;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
+<h1 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h1><p>目前的主要用途是记录算法竞赛相关，包括但不限于题解、笔记</p>
+<p>以及记录学校文化课、计算机相关笔记</p>
+<p>也有可能写一些生活杂感、游戏杂谈</p>
+<p>反正Github Page不要钱，多少写一点？</p>
+
         
     </div>
 </v-card>
-
-
-
         
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
@@ -233,12 +226,6 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: "default"
-    });</script>
 
 
 

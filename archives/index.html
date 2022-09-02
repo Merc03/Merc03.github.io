@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="no-siteapp">
@@ -13,7 +13,7 @@
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
     
     
-        <link rel="shortcut icon" href="/images/favicon.ico">
+        <link rel="shortcut icon" href="/images/favicon.png">
     
      
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -58,7 +58,7 @@
                             <div id="sidebar" class="float-right">
     <a href="/" rel="home">
         <v-avatar size=96>
-            <img id="logo" src="/images/avatar.webp">     
+            <img id="logo" src="/images/avatar.jpg">     
         </v-avatar> 
     </a>
     <v-divider></v-divider>
@@ -79,10 +79,18 @@
     <v-list id="main-menu" class="font-weight-bold" flat>
         
             
+            <v-list-item href="/archives/" link>
+            <v-list-item-icon><v-icon>archive</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                归档
+            </v-list-item-content>
+            </v-list-item>
+        
+            
             <v-list-item href="/about/" link>
             <v-list-item-icon><v-icon>account_circle</v-icon></v-list-item-icon>
             <v-list-item-content>
-                About
+                关于
             </v-list-item-content>
             </v-list-item>
         
@@ -92,11 +100,11 @@
         <v-list id="sub-menu" class="font-weight-medium" dense>
             
                 
-                    <v-list-item href="/categories/%E6%B5%8B%E8%AF%95/" link>
+                    <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
                         <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
-                                    <span>测试</span>                              
+                                    <span>日记</span>                              
                                 </v-list-item-content>                           
                             </v-hover>
                         </v-badge>
@@ -154,6 +162,11 @@
           </v-btn>
           
             
+            <v-btn icon href="/archives/">
+              <v-icon>archive</v-icon>
+            </v-btn>
+          
+            
             <v-btn icon href="/about/">
               <v-icon>account_circle</v-icon>
             </v-btn>
@@ -177,18 +190,18 @@
             
                 <v-timeline-item class="timeline-header" color="secondary lighten-2">
                     <a href="/archives/2022" class="timeline-title">2022</a>
-                    <span class="timeline-subtitle">Archives</span>
+                    <span class="timeline-subtitle">归档</span>
                 </v-timeline-item>
                 
             
             <v-timeline-item fill-dot small color="secondary lighten-2">
                 <div class="timeline-item-post d-none d-md-block">
-                    <span class="timeline-item-time">2022.09.01</span>
-                    <a href="/2022/09/01/Test/" class="timeline-item-title">Test</a>
+                    <span class="timeline-item-time">2022.09.02</span>
+                    <a href="/2022/09/02/%E5%90%AF%E7%A8%8B/" class="timeline-item-title">启程</a>
                 </div>
                 <div class="timeline-item-post-mobile d-block d-md-none">
-                    <span class="timeline-item-time">2022.09.01</span><br>
-                    <a href="/2022/09/01/Test/" class="timeline-item-title">Test</a>
+                    <span class="timeline-item-time">2022.09.02</span><br>
+                    <a href="/2022/09/02/%E5%90%AF%E7%A8%8B/" class="timeline-item-title">启程</a>
                 </div>
                 <v-divider></v-divider>
             </v-timeline-item>
