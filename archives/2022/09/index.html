@@ -100,6 +100,18 @@
         <v-list id="sub-menu" class="font-weight-medium" dense>
             
                 
+                    <v-list-item href="/categories/%E6%9C%AA%E5%AE%8C%E6%88%90/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>未完成</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+                
                     <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
                         <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
                             <v-hover v-model="menuHover">
@@ -193,6 +205,20 @@
                     <span class="timeline-subtitle">归档</span>
                 </v-timeline-item>
                 
+            
+            <v-timeline-item fill-dot small color="secondary lighten-2">
+                <div class="timeline-item-post d-none d-md-block">
+                    <span class="timeline-item-time">2022.09.03</span>
+                    <a href="/2022/09/03/CSP202206%20%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/" class="timeline-item-title">CSP202206 光线追踪</a>
+                </div>
+                <div class="timeline-item-post-mobile d-block d-md-none">
+                    <span class="timeline-item-time">2022.09.03</span><br>
+                    <a href="/2022/09/03/CSP202206%20%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/" class="timeline-item-title">CSP202206 光线追踪</a>
+                </div>
+                <v-divider></v-divider>
+            </v-timeline-item>
+        
+            
             
             <v-timeline-item fill-dot small color="secondary lighten-2">
                 <div class="timeline-item-post d-none d-md-block">
