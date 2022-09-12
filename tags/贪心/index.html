@@ -34,62 +34,6 @@
 
     
     
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
     
@@ -263,170 +207,26 @@
 </v-row>
 
                             <v-card class="elevation-2 index-card">
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2022-09-12
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-              <v-card flat color="secondary" tile class="index-article-header-tag  font-weight-medium">
-                
-                  <span class="index-article-header-tag-content">
-                    <v-icon>fas fa-tag</v-icon>
-                    <a rel="tag" href = /tags/%E8%B4%AA%E5%BF%83/ >贪心</a>
-                  </span>
-                
-              </v-card>
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/categories/%E9%A2%98%E8%A7%A3/">题解></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/2022/09/12/%5BLuogu%20P2882%5D%20Face%20The%20Right%20Way%20G/">[Luogu P2882] Face The Right Way G</a>
-      </div>
-      
-      <div class="index-article-content">
+    <v-timeline class="timeline" dense>
+        <v-timeline-item class="timeline-header" color="secondary lighten-2">
+            <span class="timeline-title">贪心</span>
+            <span class="timeline-subtitle">标签</span>
+        </v-timeline-item>
         
-          思路数据范围不大，且不知道K难以处理，考虑枚举K。
-显然翻转顺序并不重要。考虑最边缘的牛，反证...
+            <v-timeline-item fill-dot small color="secondary lighten-2">
+                <div class="timeline-item-post d-none d-md-block">
+                    <span class="timeline-item-time">2022.09.12</span>
+                    <a href="/2022/09/12/%5BLuogu%20P2882%5D%20Face%20The%20Right%20Way%20G/" class="timeline-item-title">[Luogu P2882] Face The Right Way G</a>
+                </div>
+                <div class="timeline-item-post-mobile d-block d-md-none">
+                    <span class="timeline-item-time">2022.09.12</span><br>
+                    <a href="/2022/09/12/%5BLuogu%20P2882%5D%20Face%20The%20Right%20Way%20G/" class="timeline-item-title">[Luogu P2882] Face The Right Way G</a>
+                </div>
+                <v-divider></v-divider>
+            </v-timeline-item>
         
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/2022/09/12/%5BLuogu%20P2882%5D%20Face%20The%20Right%20Way%20G/">阅读更多</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2022-09-05
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/categories/%E6%97%A5%E8%AE%B0/">日记></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/2022/09/05/%E4%B8%8D%E8%AE%BA%E6%AC%B2%E5%BE%80%E4%BD%95%E6%96%B9/">不论欲往何方</a>
-      </div>
-      
-      <div class="index-article-content">
-        
-          明明该做题却沉迷于写小作文
-本来以为已经无法追赶的、消失在记忆深处的，所谓天才们，在这样一个时...
-        
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/2022/09/05/%E4%B8%8D%E8%AE%BA%E6%AC%B2%E5%BE%80%E4%BD%95%E6%96%B9/">阅读更多</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2022-09-03
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-              <v-card flat color="secondary" tile class="index-article-header-tag  font-weight-medium">
-                
-                  <span class="index-article-header-tag-content">
-                    <v-icon>fas fa-tag</v-icon>
-                    <a rel="tag" href = /tags/CSP/ >CSP</a>
-                  </span>
-                
-                  <span class="index-article-header-tag-content">
-                    <v-icon>fas fa-tag</v-icon>
-                    <a rel="tag" href = /tags/STL/ >STL</a>
-                  </span>
-                
-              </v-card>
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/categories/%E6%9C%AA%E5%AE%8C%E6%88%90/">未完成></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/2022/09/03/%5BCSP%20202206%5D%20%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/">[CSP 202206] 光线追踪</a>
-      </div>
-      
-      <div class="index-article-content">
-        
-          思路由于 $a \leq 0.8$，每一束光只会反射不到100次。注意到镜面上点的个数有限，考...
-        
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/2022/09/03/%5BCSP%20202206%5D%20%E5%85%89%E7%BA%BF%E8%BF%BD%E8%B8%AA/">阅读更多</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2022-09-02
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/categories/%E6%97%A5%E8%AE%B0/">日记></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/2022/09/02/%E5%90%AF%E7%A8%8B/">启程</a>
-      </div>
-      
-      <div class="index-article-content">
-        
-          明明声称过要放弃，但是却又不自主地回到了算法竞赛的赛场上。
-站在这个节点回望，真正吸引我的，可...
-        
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/2022/09/02/%E5%90%AF%E7%A8%8B/">阅读更多</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-   
-</v-card>  
+    </v-timeline>
+</v-card>
 
          
                             <div id="mobile-footer" class="d-block d-md-none">
