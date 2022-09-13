@@ -125,7 +125,7 @@
             
                 
                     <v-list-item href="/categories/%E9%A2%98%E8%A7%A3/" link>
-                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="2" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
                                     <span>题解</span>                              
@@ -237,6 +237,14 @@
                         <v-hover v-model="tagHover">
                             <v-chip color="secondary" class="tags-chip font-weight-medium">
                                 <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
+                            </v-chip>
+                        </v-hover>
+                    </v-badge>
+                
+                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
+                        <v-hover v-model="tagHover">
+                            <v-chip color="secondary" class="tags-chip font-weight-medium">
+                                <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>
                             </v-chip>
                         </v-hover>
                     </v-badge>
