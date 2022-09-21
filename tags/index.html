@@ -125,7 +125,7 @@
             
                 
                     <v-list-item href="/categories/%E9%A2%98%E8%A7%A3/" link>
-                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="4" >
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="5" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
                                     <span>题解</span>                              
@@ -253,6 +253,22 @@
                         <v-hover v-model="tagHover">
                             <v-chip color="secondary" class="tags-chip font-weight-medium">
                                 <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
+                            </v-chip>
+                        </v-hover>
+                    </v-badge>
+                
+                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
+                        <v-hover v-model="tagHover">
+                            <v-chip color="secondary" class="tags-chip font-weight-medium">
+                                <a href="/tags/%E6%90%9C%E7%B4%A2/">搜索</a>
+                            </v-chip>
+                        </v-hover>
+                    </v-badge>
+                
+                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
+                        <v-hover v-model="tagHover">
+                            <v-chip color="secondary" class="tags-chip font-weight-medium">
+                                <a href="/tags/A/">A*</a>
                             </v-chip>
                         </v-hover>
                     </v-badge>
