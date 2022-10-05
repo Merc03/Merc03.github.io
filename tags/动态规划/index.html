@@ -41,8 +41,8 @@
     
     
     <title>
-        
-            search | 只是旮角而已
+          
+            只是旮角而已
         
     </title>
     
@@ -206,18 +206,29 @@
   </v-col>
 </v-row>
 
-                            <v-card class="elevation-2 post-card">
-    <div class="post-header">
-        <a class="post-header-title font-weight-medium" href="/search/index.html">搜索</a>
-    </div>
-    <div class="post-content typo">
+                            <v-card class="elevation-2 index-card">
+    <v-timeline class="timeline" dense>
+        <v-timeline-item class="timeline-header" color="secondary lighten-2">
+            <span class="timeline-title">动态规划</span>
+            <span class="timeline-subtitle">标签</span>
+        </v-timeline-item>
         
-            <v-text-field label="Search" v-model="searchPageValue" prepend-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchPageValue,true)"></v-text-field>
-            <v-card class="elevation-0" id="search-result"></v-card>
+            <v-timeline-item fill-dot small color="secondary lighten-2">
+                <div class="timeline-item-post d-none d-md-block">
+                    <span class="timeline-item-time">2022.09.24</span>
+                    <a href="/2022/09/24/%5BLuogu%20P2501%5D%20%E6%95%B0%E5%AD%97%E5%BA%8F%E5%88%97/" class="timeline-item-title">[Luogu P2501] 数字序列</a>
+                </div>
+                <div class="timeline-item-post-mobile d-block d-md-none">
+                    <span class="timeline-item-time">2022.09.24</span><br>
+                    <a href="/2022/09/24/%5BLuogu%20P2501%5D%20%E6%95%B0%E5%AD%97%E5%BA%8F%E5%88%97/" class="timeline-item-title">[Luogu P2501] 数字序列</a>
+                </div>
+                <v-divider></v-divider>
+            </v-timeline-item>
         
-    </div>
+    </v-timeline>
 </v-card>
-        
+
+         
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
                                 <div id="mobile-footer-content">
