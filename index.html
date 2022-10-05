@@ -168,11 +168,11 @@
                 
             
                 
-                    <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
-                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="3" >
+                    <v-list-item href="/categories/%E9%A2%98%E8%A7%A3/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="6" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
-                                    <span>日记</span>                              
+                                    <span>题解</span>                              
                                 </v-list-item-content>                           
                             </v-hover>
                         </v-badge>
@@ -180,11 +180,11 @@
                 
             
                 
-                    <v-list-item href="/categories/%E9%A2%98%E8%A7%A3/" link>
-                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="6" >
+                    <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="4" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
-                                    <span>题解</span>                              
+                                    <span>日记</span>                              
                                 </v-list-item-content>                           
                             </v-hover>
                         </v-badge>
@@ -263,6 +263,40 @@
 </v-row>
 
                             <v-card class="elevation-2 index-card">
+  
+    <article class="index-article">
+      
+      <div class="index-article-header">
+        <v-row no-gutters>
+          <v-col cols="auto">
+            <div class="index-article-header-date font-weight-medium">
+              2022-10-05
+            </div>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="auto">
+            
+          </v-col>
+        </v-row>
+        <span>
+          
+            <a class="index-article-header-category font-weight-bold" href="/categories/%E6%97%A5%E8%AE%B0/">日记></a>
+           
+        </span> 
+        <a class="index-article-header-title font-weight-medium" href="/2022/10/05/%E6%88%91%E4%B8%8E%E6%80%8E%E6%A0%B7%E7%9A%84%E6%88%91/">我与怎样的我</a>
+      </div>
+      
+      <div class="index-article-content">
+        
+          很惭愧，明明有更多事情可以做，像是写几道算法题、学点微积分、继续肝冰岩实习……也有更多事情可以...
+        
+      </div>
+      
+      <div class="index-article-readmore ">
+        <v-btn text href="/2022/10/05/%E6%88%91%E4%B8%8E%E6%80%8E%E6%A0%B7%E7%9A%84%E6%88%91/">阅读更多</v-btn>
+      </div>
+      <v-divider></v-divider>
+    </article> 
   
     <article class="index-article">
       
@@ -664,44 +698,20 @@
       </div>
       <v-divider></v-divider>
     </article> 
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2022-09-02
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/categories/%E6%97%A5%E8%AE%B0/">日记></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/2022/09/02/%E5%90%AF%E7%A8%8B/">启程</a>
-      </div>
-      
-      <div class="index-article-content">
-        
-          明明声称过要放弃，但是却又不自主地回到了算法竞赛的赛场上。
-站在这个节点回望，真正吸引我的，可...
-        
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/2022/09/02/%E5%90%AF%E7%A8%8B/">阅读更多</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
    
 </v-card>  
 
+
+  <div id="pagination" class="text-center">
+    <v-pagination 
+      v-model="currentPage" 
+      :length=2 
+      @input="PageChange" 
+      prev-icon="chevron_left"
+      next-icon="chevron_right"
+      color="secondary"
+    ></v-pagination>
+  </div>
          
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
