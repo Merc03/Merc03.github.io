@@ -100,18 +100,6 @@
         <v-list id="sub-menu" class="font-weight-medium" dense>
             
                 
-                    <v-list-item href="/categories/%E6%9C%AA%E5%AE%8C%E6%88%90/" link>
-                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
-                            <v-hover v-model="menuHover">
-                                <v-list-item-content>
-                                    <span>未完成</span>                              
-                                </v-list-item-content>                           
-                            </v-hover>
-                        </v-badge>
-                    </v-list-item>
-                
-            
-                
                     <v-list-item href="/categories/%E9%A2%98%E8%A7%A3/" link>
                         <v-badge :value="menuHover" transition="slide-y-transition" inline content="6" >
                             <v-hover v-model="menuHover">
@@ -124,11 +112,35 @@
                 
             
                 
+                    <v-list-item href="/categories/%E6%9C%AA%E5%AE%8C%E6%88%90/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>未完成</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+                
                     <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
                         <v-badge :value="menuHover" transition="slide-y-transition" inline content="4" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
                                     <span>日记</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+                
+                    <v-list-item href="/categories/%E6%B8%B8%E8%AE%B0/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>游记</span>                              
                                 </v-list-item-content>                           
                             </v-hover>
                         </v-badge>
@@ -217,6 +229,20 @@
                     <span class="timeline-subtitle">归档</span>
                 </v-timeline-item>
                 
+            
+            <v-timeline-item fill-dot small color="secondary lighten-2">
+                <div class="timeline-item-post d-none d-md-block">
+                    <span class="timeline-item-time">2022.10.09</span>
+                    <a href="/2022/10/09/%E5%86%B0%E5%B2%A922%E7%A7%8B%E6%8B%9B%E6%B8%B8%E8%AE%B0/" class="timeline-item-title">冰岩22秋招游记</a>
+                </div>
+                <div class="timeline-item-post-mobile d-block d-md-none">
+                    <span class="timeline-item-time">2022.10.09</span><br>
+                    <a href="/2022/10/09/%E5%86%B0%E5%B2%A922%E7%A7%8B%E6%8B%9B%E6%B8%B8%E8%AE%B0/" class="timeline-item-title">冰岩22秋招游记</a>
+                </div>
+                <v-divider></v-divider>
+            </v-timeline-item>
+        
+            
             
             <v-timeline-item fill-dot small color="secondary lighten-2">
                 <div class="timeline-item-post d-none d-md-block">

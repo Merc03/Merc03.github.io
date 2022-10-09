@@ -100,18 +100,6 @@
         <v-list id="sub-menu" class="font-weight-medium" dense>
             
                 
-                    <v-list-item href="/categories/%E6%9C%AA%E5%AE%8C%E6%88%90/" link>
-                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
-                            <v-hover v-model="menuHover">
-                                <v-list-item-content>
-                                    <span>未完成</span>                              
-                                </v-list-item-content>                           
-                            </v-hover>
-                        </v-badge>
-                    </v-list-item>
-                
-            
-                
                     <v-list-item href="/categories/%E9%A2%98%E8%A7%A3/" link>
                         <v-badge :value="menuHover" transition="slide-y-transition" inline content="6" >
                             <v-hover v-model="menuHover">
@@ -124,11 +112,35 @@
                 
             
                 
+                    <v-list-item href="/categories/%E6%9C%AA%E5%AE%8C%E6%88%90/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>未完成</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+                
                     <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
                         <v-badge :value="menuHover" transition="slide-y-transition" inline content="4" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
                                     <span>日记</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+                
+                    <v-list-item href="/categories/%E6%B8%B8%E8%AE%B0/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>游记</span>                              
                                 </v-list-item-content>                           
                             </v-hover>
                         </v-badge>
@@ -220,7 +232,7 @@
                     <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
                         <v-hover v-model="tagHover">
                             <v-chip color="secondary" class="tags-chip font-weight-medium">
-                                <a href="/tags/CSP/">CSP</a>
+                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
                             </v-chip>
                         </v-hover>
                     </v-badge>
@@ -228,7 +240,23 @@
                     <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
                         <v-hover v-model="tagHover">
                             <v-chip color="secondary" class="tags-chip font-weight-medium">
-                                <a href="/tags/STL/">STL</a>
+                                <a href="/tags/LIS/">LIS</a>
+                            </v-chip>
+                        </v-hover>
+                    </v-badge>
+                
+                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
+                        <v-hover v-model="tagHover">
+                            <v-chip color="secondary" class="tags-chip font-weight-medium">
+                                <a href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a>
+                            </v-chip>
+                        </v-hover>
+                    </v-badge>
+                
+                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="3" >
+                        <v-hover v-model="tagHover">
+                            <v-chip color="secondary" class="tags-chip font-weight-medium">
+                                <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
                             </v-chip>
                         </v-hover>
                     </v-badge>
@@ -249,10 +277,18 @@
                         </v-hover>
                     </v-badge>
                 
-                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="3" >
+                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
                         <v-hover v-model="tagHover">
                             <v-chip color="secondary" class="tags-chip font-weight-medium">
-                                <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>
+                                <a href="/tags/CSP/">CSP</a>
+                            </v-chip>
+                        </v-hover>
+                    </v-badge>
+                
+                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
+                        <v-hover v-model="tagHover">
+                            <v-chip color="secondary" class="tags-chip font-weight-medium">
+                                <a href="/tags/STL/">STL</a>
                             </v-chip>
                         </v-hover>
                     </v-badge>
@@ -261,30 +297,6 @@
                         <v-hover v-model="tagHover">
                             <v-chip color="secondary" class="tags-chip font-weight-medium">
                                 <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a>
-                            </v-chip>
-                        </v-hover>
-                    </v-badge>
-                
-                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
-                        <v-hover v-model="tagHover">
-                            <v-chip color="secondary" class="tags-chip font-weight-medium">
-                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
-                            </v-chip>
-                        </v-hover>
-                    </v-badge>
-                
-                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
-                        <v-hover v-model="tagHover">
-                            <v-chip color="secondary" class="tags-chip font-weight-medium">
-                                <a href="/tags/LIS/">LIS</a>
-                            </v-chip>
-                        </v-hover>
-                    </v-badge>
-                
-                    <v-badge :value="tagHover" transition="slide-x-transition" inline content="1" >
-                        <v-hover v-model="tagHover">
-                            <v-chip color="secondary" class="tags-chip font-weight-medium">
-                                <a href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a>
                             </v-chip>
                         </v-hover>
                     </v-badge>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="shortcut icon" href="/images/favicon.png">
+    
+     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.30/dist/vuetify.min.css" rel="stylesheet">
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+    
+
+
+
+
+
+
+
+    
+    
+          
+
+    
+    
+    
+    
+    <title>
+        
+            冰岩22秋招游记 | 只是旮角而已
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+    <div id="app">
+        <v-app>
+            <v-content id="page">
+                <v-container fluid>
+                    <v-row>
+                        <v-col cols="2" class="d-none d-md-block">
+                            <div id="sidebar" class="float-right">
+    <a href="/" rel="home">
+        <v-avatar size=96>
+            <img id="logo" src="/images/avatar.jpg">     
+        </v-avatar> 
+    </a>
+    <v-divider></v-divider>
+    <div class="mini-menu">
+        <v-btn icon href="/">
+            <v-icon>home</v-icon>
+        </v-btn>
+        <v-btn icon href="/categories/">
+            <v-icon>folder</v-icon>
+        </v-btn>
+        <v-btn icon href="/tags/">
+            <v-icon>bookmark</v-icon>
+        </v-btn>
+        <v-btn icon @click="SetNightMode">
+            <v-icon>{{ nightMode }}</v-icon>
+        </v-btn>
+    </div>
+    <v-list id="main-menu" class="font-weight-bold" flat>
+        
+            
+            <v-list-item href="/archives/" link>
+            <v-list-item-icon><v-icon>archive</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                归档
+            </v-list-item-content>
+            </v-list-item>
+        
+            
+            <v-list-item href="/about/" link>
+            <v-list-item-icon><v-icon>account_circle</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                关于
+            </v-list-item-content>
+            </v-list-item>
+        
+    </v-list>
+    <v-divider></v-divider>
+    
+        <div class="post-toc">
+            <a href="/2022/10/09/%E5%86%B0%E5%B2%A922%E7%A7%8B%E6%8B%9B%E6%B8%B8%E8%AE%B0/" class="toc-header">文章目录</a>
+            <div class="toc-content">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E5%AE%A1"><span class="toc-number">1.</span> <span class="toc-text">初审</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%94%E8%AF%95"><span class="toc-number">2.</span> <span class="toc-text">笔试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95"><span class="toc-number">3.</span> <span class="toc-text">面试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E4%B9%A0"><span class="toc-number">4.</span> <span class="toc-text">实习</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD"><span class="toc-number">5.</span> <span class="toc-text">后续</span></a></li></ol>
+            </div>
+        </div>
+    
+
+    <div id="footer">
+        <div class="footer-social">
+            
+                
+                <v-btn icon href="https://github.com/Merc03" target="_blank">
+                    <v-icon>fab fa-github</v-icon>
+                </v-btn>
+            
+        </div>
+        <v-divider></v-divider>
+        <div class="footer-content">
+            
+            <span>Theme: <a target="_blank" rel="noopener" href="https://github.com/kb1000fx/hexo-theme-insulin">Insulin</a></span><br>
+            <span>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span><br>
+            <span>
+                &copy; 2022 - 2022 
+                Mercury03
+            </span>
+        </div>
+    </div>
+</div>
+
+                        </v-col>
+                        <v-col cols="12" md="10">
+                            <v-row>
+  <v-col cols="12" md="8" align-self="end">
+    <div id="site-header">
+      <div id="site-title">
+        <a href="/" rel="home">只是旮角而已</a>
+      </div>
+      <div id="site-description"></div>
+      <div id="mobile-menu" class="d-block d-md-none">
+        <v-text-field label="请输入关键字" data-src="search.xml" v-model="searchHeaderValue" prepend-inner-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchHeaderValue,false)"></v-text-field>
+        <div class="mobile-mini-menu">
+          <v-btn icon href="/">
+              <v-icon>home</v-icon>
+          </v-btn>
+          <v-btn icon href="/categories/">
+              <v-icon>folder</v-icon>
+          </v-btn>
+          <v-btn icon href="/tags/">
+              <v-icon>bookmark</v-icon>
+          </v-btn>
+          <v-btn icon @click="SetNightMode">
+              <v-icon>{{ nightMode }}</v-icon>
+          </v-btn>
+          
+            
+            <v-btn icon href="/archives/">
+              <v-icon>archive</v-icon>
+            </v-btn>
+          
+            
+            <v-btn icon href="/about/">
+              <v-icon>account_circle</v-icon>
+            </v-btn>
+          
+        </div>
+      </div>    
+    </div>
+  </v-col>  
+  <v-col cols="4" align-self="end" class="d-none d-md-block">
+    <v-col align-self="end">
+      <v-text-field label="请输入关键字" data-src="search.xml" v-model="searchHeaderValue" prepend-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchHeaderValue,false)"></v-text-field>
+    </v-col> 
+  </v-col>
+</v-row>
+
+                            <v-card class="elevation-2 post-card">
+    
+    
+        <div class="post-header">
+  <a class="post-header-title font-weight-medium" href="/2022/10/09/%E5%86%B0%E5%B2%A922%E7%A7%8B%E6%8B%9B%E6%B8%B8%E8%AE%B0/">冰岩22秋招游记</a>
+  <div class="post-header-meta">   
+    <span>
+      <v-icon color="">event</v-icon>
+      发布于:&nbsp;2022-10-09
+    </span>
+    <span>
+      <v-icon color="">event_available</v-icon>
+      更新于:&nbsp;2022-10-09
+    </span>
+    <span>
+      <v-icon color="">folder</v-icon>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a>
+    </span>
+    
+  </div>
+</div>
+
+    
+    
+    
+    
+    <div class="post-content typo">
+        <p>本来所谓招新和游记牛头不对马嘴，但考虑到自己确实只是“游”了几天，索性也归在游记里罢。</p>
+<h1 id="初审"><a href="#初审" class="headerlink" title="初审"></a>初审</h1><p>大抵是讲一下自身能力优势、对游戏开发的理解之类的。</p>
+<p>很可悲的是，发现自己除了所谓省一，其实没有什么好讲的东西。OI在役时一直认为，只要有少量的、分量足够重的东西就足够支撑履历。现在来看，其实是很天真的想法，自己的能力远没有强大到能凭单一的事物支撑履历的地步。因此现在也应该稍微成熟一点，抓住各种大大小小的机会去奋斗了。</p>
+<h1 id="笔试"><a href="#笔试" class="headerlink" title="笔试"></a>笔试</h1><p>技术部分没啥好讲的，经典现学现卖。</p>
+<p>写如何理解游戏开发，洋洋洒洒拉清单拉了一大堆，但是很难说有什么真正深入的东西，而更多的是一些套版、化用。即便是喜爱的、投入大量时间的事物，也并没有深入学习什么，反而只是走马观花、浅尝辄止。或许最近老是电子阳痿也和这有一些关系？止步于浅层次的新鲜感刺激，于是越来越麻木？</p>
+<h1 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h1><p>虽然当时不知道，但想不到居然以这种方式面基了KS。</p>
+<p>比起貌似还行的笔试，面试可以说是一塌糊涂。</p>
+<p>问到了笔试考过并且详细作答了的帧同步&#x2F;状态同步的问题，脑子里完全是空的，最后居然是KS一步一步引导解释了概念才大概答上。问完之后发现自己根本不会C#，只不过七七八八学了个样子，应当反思。</p>
+<p>谈到有没有想做的游戏，胡扯了些AI War之类的东西（好游戏，虽然现在都没玩过），意识到开发&#x2F;社区&#x2F;游玩的思维模式存在相当大差异。</p>
+<p>到了所谓闲聊部分，KS问起大学几年有什么计划、本科毕业后有什么打算，本来貌似清晰的想法却一下模糊不定了，只能给出貌似确切的回答。（见之前的文章）</p>
+<h1 id="实习"><a href="#实习" class="headerlink" title="实习"></a>实习</h1><p>实习更是重量级。</p>
+<p>先花大半天看Missing Semester学了下Git，虽然到最后也只是不断地commit-push，没有checkout过也没有merge过branch。不过进一步感受到Missing Semester的价值，简洁有力、深入浅出大抵就是如此，之后一定要尽快找时间学完。</p>
+<p>选题，Splatoon&#x2F;胡闹厨房&#x2F;星季。这是第一个失误点，自己做决策时太容易受情绪影响了。一方面是希望能脱颖而出的自大心态，另一方面是初见Unity的茫然无措。网上搜了下Splatoon的染色机制的复刻，颇有些被吓到了的意思。最后选了个最简单的星季了事。后来在实习群里交流的时候发现，两个选Splatoon的同学其实也只是做了小方块换颜色，自己完全有机会实现。这里的教训是自己解构需求的能力不够强，没有抓住关键部分，被繁杂的表象严重干扰了思考。</p>
+<p>前面几天大海捞针终于找到个能对着敲的图文教程，然后慢慢大概理解了Unity的执行逻辑，写一会查查API，慢慢有一点编程开发的感觉了。</p>
+<p>后面几天微缩国庆假期结束，文化课压力出现（并没有，实质上是到闷得要死的地方玩手机的活动），自己的精神也开始感到疲惫。慢慢地开始高强度摸鱼：冲浪水群玩游戏——甚至说单纯对着IDE发呆，效率急转直下。每天说要通宵赶工实际上也就是睡眠时间整体后移，结果又是整体效率下降，整天困得不行。比起室友和别的实习的同学，自己的自我激励太弱了，专注度和持续工作能力都很差。</p>
+<p>到最后就是经典偷工减料环节，需求简化简化再简化，最后索性删掉。马马虎虎完成所谓核心需求，交了所谓半成品上去。</p>
+<p>验收环节倒是中规中矩，怎么实现的怎么讲。从提的问题感觉到自己的架构和实现都有点奇异，没有很充分地利用到Unity这个轮子，还是有OI代码的诡异优化的味道。看来除了代码格式规范和OOP，转向一般的工程开发还有很多东西要适应、很多东西要学习。</p>
+<h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><p>首先确定要润的话，就把大二进组作为一个必要计划，并以科研为重。</p>
+<p>当时决定来冰岩，一方面是确实闲得发慌（？），另一方面是觉得自己“稍微有点基础”，最好能找点事情做。游戏开发是一个自己有比较高的兴趣，也能接触大型软件、协同开发的机会，所以报了游戏组。现在看来自己的能力其实亟待提高，这个想法当然无法实行。</p>
+<p>那么接下来还是科研导向地去学习。本学期就先以学习技能、提高能力为主。等到下学期转去CS，如果有机会，考虑秋招去联创AI&#x2F;Lab之类的，否则就继续积累，为进组做准备。</p>
+<p>这次秋招毫无疑问对我来说结果是失败的，但奇妙的是正反馈却很强。不管怎样，都从中汲取了有意义的事物，那就是好的。</p>
+<blockquote>
+<p>  逃跑的话能得到一样东西，前进的话就能得到两样东西。</p>
+</blockquote>
+<p>虽然中二并且土气，但姑且以《水星的魔女》的这句台词作结。</p>
+<p>继续前进！</p>
+
+    </div>
+    <!--文末结束语-->
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 | The End --- </div>
+    
+    <!--页脚广告-->
+    
+    <v-divider></v-divider>
+    
+    <div class="post-nav">             
+              
+          
+            <div class="post-nav-button float-right">
+                <a class="font-weight-bold text-right" href="/2022/10/05/%E6%88%91%E4%B8%8E%E6%80%8E%E6%A0%B7%E7%9A%84%E6%88%91/">      
+                    我与怎样的我
+                </a>
+                <v-icon>chevron_right</v-icon>
+            </div>
+        
+    </div>
+</v-card>
+
+
+
+        
+                            <div id="mobile-footer" class="d-block d-md-none">
+                                <v-divider></v-divider>
+                                <div id="mobile-footer-content">
+                                    <span>Theme: <a target="_blank" rel="noopener" href="https://github.com/kb1000fx/hexo-theme-insulin">Insulin</a> &nbsp; Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span><br>
+                                    <span> &copy; 2022 - 2022 Mercury03</span>
+                                </div>
+                            </div>                   
+                        </v-col>                                            
+                    </v-row>
+                </v-container>
+            </v-content>
+        </v-app>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.30"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-base64@3.5.2/base64.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+
+</body>
+</html>
