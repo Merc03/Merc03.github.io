@@ -103,7 +103,7 @@
     
     <title>
         
-            [Atcoder abc127-f] Absolute Minima | 只是旮角而已
+            纵使前路黯淡无光 | 只是旮角而已
         
     </title>
     
@@ -159,9 +159,9 @@
     <v-divider></v-divider>
     
         <div class="post-toc">
-            <a href="/2022/10/10/%5BAtcoder%20abc127-f%5D%20Absolute%20Minima/" class="toc-header">文章目录</a>
+            <a href="/2022/10/19/%E7%BA%B5%E4%BD%BF%E5%89%8D%E8%B7%AF%E9%BB%AF%E6%B7%A1%E6%97%A0%E5%85%89/" class="toc-header">文章目录</a>
             <div class="toc-content">
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">2.</span> <span class="toc-text">Code</span></a></li></ol>
+                
             </div>
         </div>
     
@@ -238,19 +238,19 @@
     
     
         <div class="post-header">
-  <a class="post-header-title font-weight-medium" href="/2022/10/10/%5BAtcoder%20abc127-f%5D%20Absolute%20Minima/">[Atcoder abc127-f] Absolute Minima</a>
+  <a class="post-header-title font-weight-medium" href="/2022/10/19/%E7%BA%B5%E4%BD%BF%E5%89%8D%E8%B7%AF%E9%BB%AF%E6%B7%A1%E6%97%A0%E5%85%89/">纵使前路黯淡无光</a>
   <div class="post-header-meta">   
     <span>
       <v-icon color="">event</v-icon>
-      发布于:&nbsp;2022-10-10
+      发布于:&nbsp;2022-10-19
     </span>
     <span>
       <v-icon color="">event_available</v-icon>
-      更新于:&nbsp;2022-10-10
+      更新于:&nbsp;2022-10-28
     </span>
     <span>
       <v-icon color="">folder</v-icon>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
     </span>
     
   </div>
@@ -261,12 +261,35 @@
     
     
     <div class="post-content typo">
-        <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>结论题：对于数轴上若干个点，到各点距离和最小的点一定是它们的中位数所在点（或所在区间）。</p>
-<p>证明：</p>
-<p>考虑任意相邻两点构成的闭区间。如果区间外两侧的点数量相等，那么闭区间内任意一点的答案均相同。如果不等，由于区间外的贡献不变，那么向点更多一侧移动总是最优的，所以一定选取点更多一侧的端点。归纳知中位数所在点或区间最优。</p>
-<p>然后就非常显然了，用对顶堆维护全局中位数即可。</p>
-<p>（代码能力是真的差）</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> q;</span><br><span class="line">ll add, sum1, sum2, siz1, siz2;</span><br><span class="line">priority_queue&lt;ll&gt; q1, q2; <span class="comment">// +, -</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">update</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(!q1.<span class="built_in">empty</span>() &amp;&amp; !q2.<span class="built_in">empty</span>() &amp;&amp; q1.<span class="built_in">top</span>() &gt; -q2.<span class="built_in">top</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> t1 = q1.<span class="built_in">top</span>(), t2 = -q2.<span class="built_in">top</span>();</span><br><span class="line">        q1.<span class="built_in">pop</span>(), q2.<span class="built_in">pop</span>();</span><br><span class="line">        sum1 = sum1 - t1 + t2;</span><br><span class="line">        sum2 = sum2 - t2 + t1;</span><br><span class="line">        q1.<span class="built_in">push</span>(t2), q2.<span class="built_in">push</span>(-t1);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;Code.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;q);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; ++i) &#123;</span><br><span class="line">        <span class="type">int</span> opt; <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;opt);</span><br><span class="line">        <span class="keyword">switch</span>(opt) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>: &#123;</span><br><span class="line">                ll a, b;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">                <span class="keyword">if</span>(siz1 &gt; siz2) &#123;</span><br><span class="line">                    q2.<span class="built_in">push</span>(-a);</span><br><span class="line">                    ++siz2, sum2 += a;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    q1.<span class="built_in">push</span>(a);</span><br><span class="line">                    ++siz1, sum1 += a;</span><br><span class="line">                &#125;</span><br><span class="line">                add += b;   </span><br><span class="line">                <span class="built_in">update</span>();</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>: &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld\n&quot;</span>, q1.<span class="built_in">top</span>(), q1.<span class="built_in">top</span>() * siz1 - sum1 + sum2 - q1.<span class="built_in">top</span>() * siz2 + add);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>本来想新开一篇的，结果发现这里有个只有标题的文档，索性直接用了。</p>
+<p>一如既往地找不到方向，原地打转。</p>
+</br>
+
+<p>ACM方面，几乎是下定决心放弃了。唯一需要注意的是12月的CSP，或许还需要再训练下手感。拿到免修的分数之后就永久告别算法竞赛了。尽管不久之前还对大学的ACM生涯做出过不少的展望，但是一次次意识到自己的天赋、毅力和既有实力都无法支持自己继续参加“低性价比”的活动了。另一方面，脱离高中的小作坊自嗨，进入相对专业的训练环境之后，也渐渐感到算法竞赛“做题”的一面，特别是实际感受了几天Unity之后，算法竞赛这样在固定框架下凭所谓“人类智慧”做规定动作的事物逐渐变得不那么有趣了，甚至说有坐牢的感觉。各种意义上，内心其实还是很羡慕实力强的选手，他们能够在这之中找到乐趣，可惜的是自己终究无法成为其中一员。</p>
+</br>
+
+<p>一直都听到一个说法“知识，还是GPA？”，或者按照留学群讲的，“把学知识和考试成绩解耦”。言下之意此处并不是真正达到所谓高等教育境界的地方，只是小镇做题家的又一个中转站——这也提醒自己前路漫漫，此地远非终点。解耦的隐藏含义是要两头抓，这又是额外的挑战。</p>
+<p>课程方面，还在漫长的试错当中。选了几天的英文微积分教材，一个字没有看。听了几节 MIT 18.06，也没有继续下去。按照实际体验和学长经验，似乎还是离不开做题刷题的老路。现在计划是能翘则翘，自己窝在宿舍看书做题。其实也就只在做线代微积分，有点担心：那些水课真的考前一周能突击完吗？但是现在去研究些思政课程也没有意义，只能走一步看一步了。自学的学习效果其实比较好，远远好过在缺氧的教室、狭窄的座位之间打瞌睡。但是最大的问题是时间管理，如何形成规律的、可持续的学习日程，把从换教室等无聊活动中解放的时间发挥起来，亟需探索。</p>
+<p>学习方面，可以说是毫无进展。除了比赛，快两周没写过代码了。队友报了华为存储的比赛，似乎探索热情很高，自己则觉得没有必要在很大概率不会从事的领域做那么多尝试，但已经组队，需要配合协作的时候也要积极出力才行。想了一下，或许该找时间把Missing Semester看完，掌握基本工具，不要老是涉及到Linux、Git就要抄作业折腾半天。然后或许该自己看一些CS核心课（反正之后学校选课了也大概率自学），或者等线代再多学一点之后直接开坑机器学习之类的。</p>
+<p>期中考试还有大约两周，要把自学的学习管理、学习模式确定下来了。在Markdown编辑器和 $ \LaTeX $ 上画了太多时间，不能再继续耽误下去了。期中考前刷刷题（也就一门微积分），然后就加速自学，尽快搞定文化课，然后把时间腾出来干自己的，考前再进行一波高强度刷题。</p>
+</br>
+
+<p>回到标题，近段时间在网络上，在和人交流的过程中，都得到“CS的热度在衰减”“留学难度在加大””华人海外发展空间有限““AI领域竞争激烈”之类的信息，各路前辈都在暗示做好最坏的准备。所以创建文档时拟了“前路黯淡无光”的标题。</p>
+<p>其实算是已有前车之鉴了，自己当时准备深入OI的时候，得到的信息也诸如此类。然后在一个不早不晚的时间退出了OI，留下一段还算美好的回忆和一个在升学选校时出乎意料地发挥了巨大作用的奖状。现在想要再试一次，同样在一个有一些兴趣但没有深入了解的领域，更主动地投入精力深耕、更主动地去搜集信息，是否能够有成果。算是某种天真幼稚的执着吧。</p>
+<p>本来是打算写一篇emo小作文的，但发现落实到实际行动上，那种迷茫无措的痛苦感觉少了许多，理清规划的同时也慢慢产生动力了。或许这正是这处博客的意义？该考虑更规律地写博客总结了。</p>
+</br> 
+
+<p>按照惯例还是要写一些漂亮话作结的：</p>
+<blockquote>
+<p>I am tormented with an everlasting itch for things remote.</p>
+<p>我对遥远的事物，抱有永恒的渴望。</p>
+<p>I love to sail forbidden seas.</p>
+<p>我喜欢在禁忌之海中航行。</p>
+<p><strong>——Herman Melville, Moby Dick</strong></p>
+</blockquote>
+<p>以无穷远处为目标，坚定地前进吧！</p>
+<p>——纵使前路黯淡无光。</p>
+
     </div>
     <!--文末结束语-->
     
@@ -277,18 +300,11 @@
     <v-divider></v-divider>
     
     <div class="post-nav">             
-        
-            <div class="post-nav-button float-left">
-                <v-icon>chevron_left</v-icon>
-                <a class="font-weight-bold text-left" href="/2022/10/10/%5BGym%20101955K%5D%20Let%20the%20Flames%20Begin/">
-                    [Gym 101955K] Let the Flames Begin
-                </a>
-            </div>
               
           
             <div class="post-nav-button float-right">
-                <a class="font-weight-bold text-right" href="/2022/10/09/%E5%86%B0%E5%B2%A922%E7%A7%8B%E6%8B%9B%E6%B8%B8%E8%AE%B0/">      
-                    冰岩22秋招游记
+                <a class="font-weight-bold text-right" href="/2022/10/10/%5BGym%20101955K%5D%20Let%20the%20Flames%20Begin/">      
+                    [Gym 101955K] Let the Flames Begin
                 </a>
                 <v-icon>chevron_right</v-icon>
             </div>

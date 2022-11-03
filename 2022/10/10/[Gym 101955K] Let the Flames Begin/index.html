@@ -39,6 +39,8 @@
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
       loader: {
+        load: ['[tex]/physics'],
+
         
             load: ['[tex]/mhchem'],
         
@@ -48,11 +50,14 @@
         }
       },
       tex: {
+        packages: {'[+]': ['physics']},
+
         inlineMath: {'[+]': [['$', '$']]},
         
             packages: {'[+]': ['mhchem']},
         
         tags: 'ams'
+
       },
       options: {
         renderActions: {
@@ -274,6 +279,13 @@
     <v-divider></v-divider>
     
     <div class="post-nav">             
+        
+            <div class="post-nav-button float-left">
+                <v-icon>chevron_left</v-icon>
+                <a class="font-weight-bold text-left" href="/2022/10/19/%E7%BA%B5%E4%BD%BF%E5%89%8D%E8%B7%AF%E9%BB%AF%E6%B7%A1%E6%97%A0%E5%85%89/">
+                    纵使前路黯淡无光
+                </a>
+            </div>
               
           
             <div class="post-nav-button float-right">

@@ -39,6 +39,8 @@
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
       loader: {
+        load: ['[tex]/physics'],
+
         
             load: ['[tex]/mhchem'],
         
@@ -48,11 +50,14 @@
         }
       },
       tex: {
+        packages: {'[+]': ['physics']},
+
         inlineMath: {'[+]': [['$', '$']]},
         
             packages: {'[+]': ['mhchem']},
         
         tags: 'ams'
+
       },
       options: {
         renderActions: {
