@@ -125,7 +125,7 @@
             
                 
                     <v-list-item href="/categories/%E6%97%A5%E8%AE%B0/" link>
-                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="5" >
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="6" >
                             <v-hover v-model="menuHover">
                                 <v-list-item-content>
                                     <span>日记</span>                              
@@ -224,6 +224,18 @@
             <span class="timeline-title">日记</span>
             <span class="timeline-subtitle">分类</span>
         </v-timeline-item>
+        
+            <v-timeline-item fill-dot small color="secondary lighten-2">
+                <div class="timeline-item-post d-none d-md-block">
+                    <span class="timeline-item-time">2022.11.06</span>
+                    <a href="/2022/11/06/%E6%89%8B%E4%B8%AD%E6%89%80%E6%8F%A1/" class="timeline-item-title">手中所握</a>
+                </div>
+                <div class="timeline-item-post-mobile d-block d-md-none">
+                    <span class="timeline-item-time">2022.11.06</span><br>
+                    <a href="/2022/11/06/%E6%89%8B%E4%B8%AD%E6%89%80%E6%8F%A1/" class="timeline-item-title">手中所握</a>
+                </div>
+                <v-divider></v-divider>
+            </v-timeline-item>
         
             <v-timeline-item fill-dot small color="secondary lighten-2">
                 <div class="timeline-item-post d-none d-md-block">
