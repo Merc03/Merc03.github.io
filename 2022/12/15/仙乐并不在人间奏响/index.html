@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="shortcut icon" href="/images/favicon.png">
+    
+     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.30/dist/vuetify.min.css" rel="stylesheet">
+    
+<link rel="stylesheet" href="/css/main.css">
+
+    
+    
+
+
+
+
+
+
+
+    
+    
+          
+
+    
+    
+    
+    
+    <title>
+        
+            仙乐并不在人间奏响 | 只是旮角而已
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+    <div id="app">
+        <v-app>
+            <v-content id="page">
+                <v-container fluid>
+                    <v-row>
+                        <v-col cols="2" class="d-none d-md-block">
+                            <div id="sidebar" class="float-right">
+    <a href="/" rel="home">
+        <v-avatar size=96>
+            <img id="logo" src="/images/avatar.jpg">     
+        </v-avatar> 
+    </a>
+    <v-divider></v-divider>
+    <div class="mini-menu">
+        <v-btn icon href="/">
+            <v-icon>home</v-icon>
+        </v-btn>
+        <v-btn icon href="/categories/">
+            <v-icon>folder</v-icon>
+        </v-btn>
+        <v-btn icon href="/tags/">
+            <v-icon>bookmark</v-icon>
+        </v-btn>
+        <v-btn icon @click="SetNightMode">
+            <v-icon>{{ nightMode }}</v-icon>
+        </v-btn>
+    </div>
+    <v-list id="main-menu" class="font-weight-bold" flat>
+        
+            
+            <v-list-item href="/archives/" link>
+            <v-list-item-icon><v-icon>archive</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                归档
+            </v-list-item-content>
+            </v-list-item>
+        
+            
+            <v-list-item href="/about/" link>
+            <v-list-item-icon><v-icon>account_circle</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                关于
+            </v-list-item-content>
+            </v-list-item>
+        
+    </v-list>
+    <v-divider></v-divider>
+    
+        <div class="post-toc">
+            <a href="/2022/12/15/%E4%BB%99%E4%B9%90%E5%B9%B6%E4%B8%8D%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%A5%8F%E5%93%8D/" class="toc-header">文章目录</a>
+            <div class="toc-content">
+                
+            </div>
+        </div>
+    
+
+    <div id="footer">
+        <div class="footer-social">
+            
+                
+                <v-btn icon href="https://github.com/Merc03" target="_blank">
+                    <v-icon>fab fa-github</v-icon>
+                </v-btn>
+            
+        </div>
+        <v-divider></v-divider>
+        <div class="footer-content">
+            
+            <span>Theme: <a target="_blank" rel="noopener" href="https://github.com/kb1000fx/hexo-theme-insulin">Insulin</a></span><br>
+            <span>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span><br>
+            <span>
+                &copy; 2022 - 2023 
+                Mercury03
+            </span>
+        </div>
+    </div>
+</div>
+
+                        </v-col>
+                        <v-col cols="12" md="10">
+                            <v-row>
+  <v-col cols="12" md="8" align-self="end">
+    <div id="site-header">
+      <div id="site-title">
+        <a href="/" rel="home">只是旮角而已</a>
+      </div>
+      <div id="site-description"></div>
+      <div id="mobile-menu" class="d-block d-md-none">
+        <v-text-field label="请输入关键字" data-src="search.xml" v-model="searchHeaderValue" prepend-inner-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchHeaderValue,false)"></v-text-field>
+        <div class="mobile-mini-menu">
+          <v-btn icon href="/">
+              <v-icon>home</v-icon>
+          </v-btn>
+          <v-btn icon href="/categories/">
+              <v-icon>folder</v-icon>
+          </v-btn>
+          <v-btn icon href="/tags/">
+              <v-icon>bookmark</v-icon>
+          </v-btn>
+          <v-btn icon @click="SetNightMode">
+              <v-icon>{{ nightMode }}</v-icon>
+          </v-btn>
+          
+            
+            <v-btn icon href="/archives/">
+              <v-icon>archive</v-icon>
+            </v-btn>
+          
+            
+            <v-btn icon href="/about/">
+              <v-icon>account_circle</v-icon>
+            </v-btn>
+          
+        </div>
+      </div>    
+    </div>
+  </v-col>  
+  <v-col cols="4" align-self="end" class="d-none d-md-block">
+    <v-col align-self="end">
+      <v-text-field label="请输入关键字" data-src="search.xml" v-model="searchHeaderValue" prepend-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchHeaderValue,false)"></v-text-field>
+    </v-col> 
+  </v-col>
+</v-row>
+
+                            <v-card class="elevation-2 post-card">
+    
+    
+        <div class="post-header">
+  <a class="post-header-title font-weight-medium" href="/2022/12/15/%E4%BB%99%E4%B9%90%E5%B9%B6%E4%B8%8D%E5%9C%A8%E4%BA%BA%E9%97%B4%E5%A5%8F%E5%93%8D/">仙乐并不在人间奏响</a>
+  <div class="post-header-meta">   
+    <span>
+      <v-icon color="">event</v-icon>
+      发布于:&nbsp;2022-12-15
+    </span>
+    <span>
+      <v-icon color="">event_available</v-icon>
+      更新于:&nbsp;2023-01-09
+    </span>
+    <span>
+      <v-icon color="">folder</v-icon>
+      分类于:&nbsp;<a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+    </span>
+    
+  </div>
+</div>
+
+    
+    
+    
+    
+    <div class="post-content typo">
+        <p>久违地打开了 Typora。</p>
+<p>其实一直不时催促自己，打算写点什么。但是似乎近来一两个月总是在匆忙地奔赴下一站——急着完成一个重要的任务、急着在下一个重要任务之前尽情玩乐。</p>
+<p>不知不觉已经拖到了2023年啊。</p>
+<p>一个多月的颓废、放纵过后，心情似乎稍微平静了，终于有心情回到此地，捋清凌乱的思绪。</p>
+<p>还是说是纵情玩乐背后的焦虑的积累终于越过了阈值，不得不回到此地寻求平静了呢？</p>
+<p>但想来这个问题的答案已经不再重要了，重要的是再次沉浸到深思中，回到支撑自己走到今天的，安静燃烧着的思想中，以及望向这种思想所描绘的未来。</p>
+<p>在这个时间节点上，借用跨年的符号做一次总结吧。</p>
+<hr>
+<p>2022年，似乎是深陷于「高考」的一年。</p>
+<p>上半年的焦虑不安、枯燥难耐不必多言，之前的日记已经有了记述，想来将来许多年都不会忘掉。需要回忆的是，自己最终究竟以怎样的姿态结束了高中生活。</p>
+<p>记得上半年写在小本本上的日记总是以哀伤开头，以昂扬结尾。往往写于某个重大考试后，偶然闲暇的午间或是课件，又或是心情烦闷，把作业丢在一旁，只是如此给自己打鸡血的晚自习。现在回想，每篇日记最后的斗志昂扬是真实的嘛？如果当真那般赤诚，那从漫无边际的试卷堆里偶然抬头、绝望望向并不可见的天空的自己，和那无数个在校或者在家的不眠之夜里，在被窝里向一块屏幕寻求解脱的自己又，又从何解释？</p>
+<p>记得考前经常对自己说类似于「举起剑」这样的话，充满了少年意气式的自我敢动。但是经过半年的沉淀，再回望这段记忆，自己是否真的举起了剑？如果剑的意志只是自我感动的幻觉，那更遑论向前挥砍了。</p>
+<p>但是，确实有一股力量，让自己跨过了那无数疲倦的寒夜，最终离开了高考的战场。题海中奋笔疾书的自己，和考场上全神贯注的自己，尽管最终取得的战果不算成功，但都是三年甚至更早以前的自己所不能想象，甚至恐惧万分的。而我今天能坐在这里组织这些文字，就是铁证。</p>
+<p>当时有一个想法「跨越了这痛苦的三年的自己就是胜利者」，或许这就是上述矛盾的根源，也是今日亟需重新思考的。</p>
+<blockquote>
+<p>三年后我将毕业，而所有我痛恨的和厌倦的事物都将被继续留在狭窄的教学楼里，而我迈步走向更广大的世界。</p>
+</blockquote>
+<blockquote>
+<p>三年后我将毕业，而所有我痛恨的和厌倦的事物都能够继续留在这世界的某一处，而我只能在记忆中疗愈伤痛。</p>
+</blockquote>
+<p>这两个表述的背后究竟代表着什么，今日的自己也没有能力给出答案，甚至今日都在此困局中。</p>
+<p>写到这里，突然意识到，或许这才是高中生涯为我留下的最后一题？</p>
+<hr>
+<p>最近总是焦虑地寻求着享乐呢。寒假没学完的课、自学的计划……强加的或自赋的压力接踵而至，然后自己就裹足不前。</p>
+<p>逃避，总是在逃避。</p>
+<p>这样想的话，如果上半年总结为「痛苦」，那么下半年就总结为「逃避」。</p>
+<p>暑假自无需多言，在这里小小地原谅自己的放纵（虽然高三也没有哪个周末真正地暂停了一切娱乐活动）。唯一算得上是有压力的事是学车，有一些不太愉快的感觉，不过确实是必要的学习，也相对短暂，暂且不提。</p>
+<p>直至假期临近结束，发现高三计划玩的游戏、看的番剧几乎没动（直到现在也差不多呢，笑），构思中的自学计划也丝毫没有落实，未免有些小小的失落——或许这就是逃避的开端——逃避未能充分享受就匆忙结束的暑假。</p>
+<p>生活上度过了短暂的适应期，说实话某种意义上比在家还舒服不少。然后，迎面而来的是「选择」——上课还是翘课、听课还是自学、竞赛还是文化课……处在初入校园的新鲜感中，并没有感到这之中庞大的信息量。一学期后再来回看，发现竟然如此匆忙地完成了如此之多的选择。而个中的得失，还要交给时间评判。</p>
+<p>唯一有遗憾的，是没有学会听课。直到现在，认真听了大半的课——如果有的话——不到5节吧？不少确实毫无营养的课，一下打消了我对「听课」这一概念所有的好感。武断地把后续所有课程定义为垃圾。想来还是有所失去。</p>
+<p>在与室友和学校的OIer群、退群群友交流一段时间后，切实感到自己所谓「目标」的巨大空虚感。沉溺于自己声称最厌恶的「符号」之中，但是对个中的路径和目标都没有哪怕起码的了解。</p>
+<p>这学期有三个或许可以称为「决策」的事物。</p>
+<ol>
+<li><p>断断续续的OI&#x2F;ACM生涯</p>
+<p> 现役的时候下定决心「离开做题」「进入到真正的技术世界」，而后竞赛失利仓皇退役、高考失利……一层一层的遗憾笼罩下，似乎是为了弥补过失般的，兜兜转转又回到了这个曾经决定离开的圈子。似乎是为了跟随自己憧憬的那群优秀OIer那般地，也貌似合群地回到了ACM的赛场。</p>
+<p> 实际上自己惨淡的CSP、ICPC网络赛成绩和难以直视的训练效果狠狠地打了自己的脸，渐渐地萌生了退役的想法——即便刚刚做出参与的宣言。</p>
+<p> 印象很深刻。当时和Huawei存储杯的队友讨论完方案，从西华园温暖的灯光中走出，来到被惨白灯光笼罩的夜色下，一边找电动车一边和队友找来的研究生大仙讨论些无谓的焦虑话题。本来打算存储杯打完再告诉他们自己准备退役的，不知为何那时脱口而出。中间说了什么，记不得了，只记得队友的一句「但是打ACM是我的爱好」，于是感到自己脑子里似乎有什么东西飘散了。后面可能还说了什么，也许没有，不重要。</p>
+<p> 做出宣言意味着某种行动，即不再绞尽脑汁去做每日一题，不再天天刷CF看有没有比赛……轻松？虚无？就像纸钱燃烧后的灰烬随风飘散那般，某段记忆就此终结了。</p>
+<p> 本来计划再稍作复建，打完本学期第二场CSP拿到免修，结果却因为疫情原因取消。OI&#x2F;ACM的真正终点，就这样迟迟无法到来，似乎是命运的某种玩笑。</p>
+</li>
+<li><p>报名冰岩游戏组</p>
+<p> 流程已经写过游记了，这里补充一点心路历程。</p>
+<p> 当时在冰岩&#x2F;联创，技术&#x2F;开发&#x2F;游戏这几个方向纠结了很久。并不是所谓强者的烦恼，而是什么都不会，笑。可能是追逐KS的脚步吧？其实当时也并不了解KS，只是偶然地有过一些弱联系。也可能是对游戏的兴趣，「见识一下真正的游戏开发是什么样子」。换而言之，又一次追求符号了。</p>
+<p> 虽然实习结果很失败，但确实是一次有益的尝试。我看见了独立于卷加权和卷科研外的另一种选择。</p>
+</li>
+<li><p>参与高中的「情系母校」计划。</p>
+<p> 或许等之后某个时间整体总结一下，这里不多赘述——这想来是个长期工作。</p>
+<p> 或许是为了装逼（很难找到准确的文明词汇呢），或许是为了嗟怨感慨，也或许是为了弥补自己在高中所渴求却缺乏的某些引导。在这个活动里向学弟学妹们传递了相当多的声音，但愿有所裨益吧。</p>
+<p> 本来想写一些感想，但隐隐感到这件事对我的影响并未充分沉淀。思绪就像腹中的胎儿，尚在孕育当中，只可从旁感受，而无从直观。那么，交给时间吧。</p>
+</li>
+</ol>
+<p>半期过后时间匆忙了不少，数学学习的模式也初步定型。</p>
+<p>然后，转专业的风波来临。</p>
+<p>这是值得单独记述的经历，此处同样也不多赘述。</p>
+<p>一切都被打乱，又一次陷入无止境的焦虑之中。最后结果确实颇为戏剧化的轻松收场，令人感慨。转专业大局已定，恰逢白纸革命爆发，大概有一周进入了高强度关注政治消息的状态，决心开始丰富信息来源、关注政治、提高知识水平。不久后学校通知返乡，在学校过了一两周网课打游戏的日子。最后终于是找不到借口，只能回家了，然后继续打游戏。</p>
+<hr>
+<p>要做的事情还有很多：补上上学期未完成的课业然后准备期末考试、CSDIY、构建生产环境……但是2022已经切实成为过往。</p>
+<p>失去的已经不可挽回，未得到的即便弥补也必有所缺失。</p>
+<p>这便是所谓「缺憾」。</p>
+<p>这学期看完了旧版EVA。即便人和人有着不可打破的隔阂——心之壁，也愿意回到这世界中去，回到人群中间，回到痛苦和缺憾之中，这便是真嗣心灵的补完——他接纳了世界的缺憾，也就补完了自己。</p>
+<p>写到这里也快要三千字了，但是放眼望去全是流水账，不得不感叹自己差劲的文字功底了。但从另一个角度想，这是否是生活的某种本质？生活总是被所谓琐碎之事填满。</p>
+<blockquote>
+<p>我们都生活在阴沟里，但仍有人仰望星空。</p>
+<p>We are all in the gutter, but some of us are looking at the stars.</p>
+<p>——王尔德</p>
+</blockquote>
+<p>这是高中作文里被用烂的句子，寓意无人不晓。但此刻我感到更能体会其中的深意了。</p>
+<p>浅显的道理，但经历得更多，站在时间的彼端回看，视野就更厚重些。大抵如此吧。</p>
+<hr>
+<p>一直秉承的观念是，追求远方和接纳当下是冲突的。正因为不满，才有动机和意志去追求。愤怒，然后燃烧着前进。</p>
+<p>但是什么是远方？什么又是当下？</p>
+<p>他者造成的当下、自己造成的当下。反对前者是否意味着追求全凭自身意志决定的世界？反对后者是否意味着否定远方到当下的一切中间态？</p>
+<p>很久以前写下「天上的仙乐并不在人间奏响」作为绝望的宣告。今天看到这句话，反而平静了，并不因为这种无可获得而感到十分痛苦。</p>
+<p>因为还可以追求人间的音乐。</p>
+<p>因为人间的音乐并不一定就比天上的音乐嘲哳。</p>
+<p>「失去的已经不可挽回，未得到的即便弥补也必有所缺失。」</p>
+<p>但是——</p>
+<p>世间还有无数值得追求的东西。</p>
+<p>似乎自己长久地活在缺憾的阴影里，中考、OI、分班、高考……为了记忆中虚构的符号而筋疲力尽。但是何必呢，其实它们已经真正结束了不是吗？眼下的需要消弭的缺憾和眼前可以追逐的风景，不是更值得关注吗？</p>
+<p>想起了《死钱》。红雾弥漫的旧世界遗迹，人们为了执着之事而相搏杀。但最后留给玩家的不是避难所的旧世界科技，也不是赌场的黄金，而是——</p>
+<blockquote>
+<p>Let it go.</p>
+</blockquote>
+<p>Reddit上搜到了<a target="_blank" rel="noopener" href="https://www.reddit.com/r/Fallout/comments/st1325/comment/hx1b51t/?utm_source=share&utm_medium=web2x&context=3">这条评论</a>。</p>
+<blockquote>
+<p>This is the speech:</p>
+<p><em>You’ve heard of the Sierra Madre Casino. We all have, the legend, the curses. Some foolishness about it lying in the middle of a City of Dead. A city of ghosts. Buried beneath a blood-red cloud… a bright, shining monument luring treasure hunters to their doom. An illusion that you can begin again, change your fortunes. Finding it, though, that’s not the hard part. It’s letting go.</em></p>
+<p>If you want to read the metaphor, Sierra Madre represents something from your past, a person, a place, a situation, sometimes you feel, that if you just went there again, everything would be perfect again, as it was before.</p>
+<p>Those memories will still be there somewhere, maybe buried, maybe no, but they are comforting and promising, they can make you feel young again - but don’t be fooled, it is all just a wishful thinking and you gotta live your present, not your past.</p>
+<p>And thus - finding it, thats easy - the hard part is to let go, to make peace with it and move on.</p>
+</blockquote>
+<p>这一年有太多的缺憾之事，一直在为将至的或已至之事痛苦，一直裹足不前。</p>
+<p>但是，天上的乌云并不阻碍你行路。</p>
+<p>是时候再次出发了。</p>
+<p>肌肉在发力时会变得坚硬，但是过度发力或是一直紧绷却会颤抖。</p>
+<p>最利之剑平静如水。</p>
+
+    </div>
+    <!--文末结束语-->
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 | The End --- </div>
+    
+    <!--页脚广告-->
+    
+    <v-divider></v-divider>
+    
+    <div class="post-nav">             
+              
+          
+            <div class="post-nav-button float-right">
+                <a class="font-weight-bold text-right" href="/2022/11/19/%E7%AB%8B%E4%BA%8E%E6%9C%AA%E6%9E%9C%E4%B9%8B%E9%80%94/">      
+                    立于未果之途
+                </a>
+                <v-icon>chevron_right</v-icon>
+            </div>
+        
+    </div>
+</v-card>
+
+
+
+        
+                            <div id="mobile-footer" class="d-block d-md-none">
+                                <v-divider></v-divider>
+                                <div id="mobile-footer-content">
+                                    <span>Theme: <a target="_blank" rel="noopener" href="https://github.com/kb1000fx/hexo-theme-insulin">Insulin</a> &nbsp; Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span><br>
+                                    <span> &copy; 2022 - 2023 Mercury03</span>
+                                </div>
+                            </div>                   
+                        </v-col>                                            
+                    </v-row>
+                </v-container>
+            </v-content>
+        </v-app>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.30"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-base64@3.5.2/base64.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+
+</body>
+</html>
